@@ -9,13 +9,13 @@ An intelligent, full-stack personal finance dashboard that helps users manage th
 
 ### Frontend:
 - React 19 (Vite + TypeScript)
-- TailwindCSS (with glassmorphism styling)
+- TailwindCSS
 - React Router
 - Axios
 
 ### Backend:
 - Django 5.x + Django Rest Framework
-- MySQL (or PostgreSQL)
+- MySQL 
 - JWT Authentication (SimpleJWT)
 
 ---
