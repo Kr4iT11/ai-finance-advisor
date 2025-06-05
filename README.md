@@ -1,5 +1,5 @@
 
-# 💸 AI-Powered Personal Finance Advisor
+# AI-Powered Personal Finance Advisor
 
 An intelligent, full-stack personal finance dashboard that helps users manage their transactions, forecast expenses, and receive AI-powered budgeting advice. Built with Django (DRF) on the backend and React + TypeScript + TailwindCSS on the frontend.
 
