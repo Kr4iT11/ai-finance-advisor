@@ -47,5 +47,4 @@ const AddTransaction: React.FC<Props> = ({ onSuccess }) => {
         </form>
     )
 }
-
 export default AddTransaction;
