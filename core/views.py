@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class TransactionListCreateView(generics.ListCreateAPIView):
     queryset = Transaction.objects.all()
     serializer_class = TransactionSerializer
-    
+    permission_classes = [permissions.IsAuthenticated]
     def get_queryset(self):
         return Transaction.objects.filter(user=self.request.user)
     

@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
-import API, { setAuthToken } from '../services/api';
+import API from '../services/api';
+import { useAuth } from '../context/AuthContext';
 
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -17,11 +19,9 @@ const Login: React.FC = () => {
     e.preventDefault();
     try {
       const res = await API.post<{ access: string }>('token/', formData);
-      const token = res.data.access;
-      localStorage.setItem('token', token);
-      setAuthToken(token);
+      login(res.data.access);
       alert('Login successful!');
-      navigate('/');
+      navigate('/dashboard');
     } catch (error) {
       alert('Login failed. Please check your credentials.');
       console.error(error);
