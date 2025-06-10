@@ -28,14 +28,14 @@ const Login = () => {
         }
     };
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow">
+            <h2 className="text-xl font-semibold mb-4 text-center">Login</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
                 <TextInput label="Username" name="username" value={formData.username} onChange={handleChange} />
                 <TextInput label="Password" name="password" value={formData.password} onChange={handleChange} type="password" />
                 <Button text="Login" type="submit" />
             </form>
-            <p>
+            <p className="mt-4 text-center">
                 Don’t have an account? <Link to="/register">Sign up here</Link>
             </p>
         </div>
