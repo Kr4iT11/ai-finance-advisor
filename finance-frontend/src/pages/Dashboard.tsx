@@ -1,3 +1,4 @@
+import AddTransaction from "../modules/transactions/AddTransaction";
 import TransactionList from "../modules/transactions/TransactionList";
 
 const Dashboard: React.FC = () => {
@@ -6,6 +7,7 @@ const Dashboard: React.FC = () => {
       <div className="max-w-3xl mx-auto space-y-8">
         <h2 className="text-3xl font-bold text-center">Dashboard</h2>
         <TransactionList />
+        <AddTransaction />
       </div>
     </div>
   );
