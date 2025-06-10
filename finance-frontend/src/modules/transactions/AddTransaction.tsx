@@ -1,6 +1,7 @@
 import { useState } from "react";
 import API from "../../services/api";
 import TextInput from "../../components/TextInput";
+import Button from "../../components/Button";
 
 interface Props {
     onSuccess?: () => void; // Callback to call on successful transaction addition
@@ -42,7 +43,7 @@ const AddTransaction: React.FC<Props> = ({ onSuccess }) => {
                 <label className="text-sm text-gray-300">Date</label>
                 <TextInput type="date" label="Username" name="date" value={formData.amount} onChange={handleChange} className="px-4 py-2 rounded-md bg-white/10 border border-white/20 text-white" />
             </div>
-            
+            <Button text="Add Transaction" type="submit" />
         </form>
     )
 }
