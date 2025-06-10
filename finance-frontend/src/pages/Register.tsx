@@ -25,9 +25,9 @@ const Register = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
     return (
-        <div>
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow">
+            <h2 className="text-xl font-semibold mb-4 text-center">Register</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
                 <TextInput label="Username" name="username" value={formData.username} onChange={handleChange} />
                 <TextInput label="Email" name="email" value={formData.email} onChange={handleChange} />
                 <TextInput label="Password" name="password" type="password" value={formData.password} onChange={handleChange} />
