@@ -10,7 +10,7 @@ interface Props {
 const AddTransaction: React.FC<Props> = ({ onSuccess }) => {
     const [formData, setFormData] = useState({
         amount: "",
-        category: "FOOD",
+        category: "", // Assuming category is a string, you can change it to an array if needed
         date: "",
         description: ""
     });
